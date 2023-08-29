@@ -1,5 +1,13 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
-# Create your views here.
 def home(request):
-    return HttpResponse("<h1>Mi web personal</h1><h2>Portada</h2>")
+    return render(request, 'core/home.html')
+
+def about(request):
+    return render(request, 'core/about.html')
+
+def briefcase(request):
+    return render(request, 'core/briefcase.html')
+
+def contact(request):
+    return render(request, 'core/contact.html')
