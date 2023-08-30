@@ -1,12 +1,14 @@
 from django.contrib import admin
 from django.urls import path, include
-from core import urls
+from core import urls as core_urls
+from briefcase import urls as briefcase_urls
 
 from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(urls))
+    path('', include(core_urls)),
+    path('', include(briefcase_urls)),
 ]
 
 
